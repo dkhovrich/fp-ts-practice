@@ -2,12 +2,27 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:fp-ts/all"
+    "plugin:fp-ts/all",
+    "plugin:promise/recommended",
+    "plugin:functional/external-recommended",
+    "plugin:functional/recommended",
+    "plugin:functional/stylistic",
+    "plugin:import/recommended"
   ],
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "plugins": [
     "@typescript-eslint",
-    "fp-ts"
+    "import",
+    "promise",
+    "fp-ts",
+    "functional"
   ],
-  "root": true
+  "root": true,
+  "rules": {
+    "no-conditional-statement": 0,
+    "functional/no-expression-statement": 0
+  }
 }
